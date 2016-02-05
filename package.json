@@ -1,0 +1,40 @@
+{
+  "name": "postcss-important-shorthand",
+  "version": "1.0.0",
+  "description": "PostCSS plugin that allows you to use shorthand for your !important rules",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "important",
+    "shorthand"
+  ],
+  "author": {
+    "name": "Sergey Lysenko",
+    "email": "soulwish.ls@gmail.com",
+    "url": "soulwish.info"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soul-wish/postcss-important-shorthand.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soul-wish/postcss-important-shorthand/issues"
+  },
+  "homepage": "https://github.com/soul-wish/postcss-important-shorthand",
+  "dependencies": {
+    "postcss": "^5.0.13"
+  },
+  "devDependencies": {
+    "ava": "^0.9.1",
+    "eslint": "^1.10.3",
+    "eslint-config-postcss": "^1.0.0"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  }
+}

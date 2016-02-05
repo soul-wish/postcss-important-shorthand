@@ -1,0 +1,23 @@
+.test-class {
+    position: relative !;
+    margin: !auto;
+    padding: 5px;
+    border: 1px solid black;
+    font: 16px/20px Arial, sans-serif;
+    text-align: center!;
+}
+.test-class a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .test-class {
+        position: absolute !;
+        font: ! 20px/28px Arial, sans-serif;
+    }
+    .test-class a {
+        text-decoration: underline!;
+        font-weight: bold !;
+    }
+}
