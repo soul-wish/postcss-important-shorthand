@@ -4,7 +4,9 @@
 
 > *Please remember, that you shouldn't use '!important' in most cases, so be careful with them. But here is a plugin, in case you really need them :). You can write `!important` declarations in different ways, as you can see on the example below. Just choose the most convenient one.*
 
-CSS before:
+---
+
+*CSS before:*
 ```css
 .test-class {
     position: relative !;
@@ -16,7 +18,7 @@ CSS before:
 }
 ```
 
-CSS after:
+*CSS after:*
 ```css
 .test-class {
     position: relative !important;
