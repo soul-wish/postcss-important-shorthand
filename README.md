@@ -1,5 +1,9 @@
 # PostCSS Important Shorthand [![Build Status][ci-img]][ci]
 
+<img align="right" width="135" height="95"
+     title="Philosopher’s stone, logo of PostCSS"
+     src="http://postcss.github.io/postcss/logo-leftp.svg">
+
 [PostCSS] plugin that allows you to use shorthand for your `!important` declarations.
 
 > *Please remember, that you shouldn't use '!important' in most cases, so be careful with them. But here is a plugin, in case you really need them :). You can write `!important` declarations in different ways, as you can see on the example below. Just choose the most convenient one.*
