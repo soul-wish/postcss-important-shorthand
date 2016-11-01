@@ -20,6 +20,6 @@ function run(t, input, output, opts = { }) {
         });
 }
 
-test('does something', t => {
+test('plugin does the magic', t => {
     return run(t, 'style.css', 'style-expected.css', { });
 });
