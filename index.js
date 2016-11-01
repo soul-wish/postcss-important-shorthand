@@ -1,8 +1,6 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-important-shorthand', function (opts) {
-    opts = opts || {};
-
+module.exports = postcss.plugin('postcss-important-shorthand', function () {
     var transformDecl = function (decl) {
         if (decl.important || decl.value.indexOf('!') === -1) {
             return;
