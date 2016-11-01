@@ -1,6 +1,6 @@
 {
   "name": "postcss-important-shorthand",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PostCSS plugin that allows you to use shorthand for your !important rules",
   "keywords": [
     "postcss",
