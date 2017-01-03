@@ -15,8 +15,8 @@ function run(t, input, output, opts = { }) {
 
     return postcss([ plugin(opts) ]).process(inputCSS)
         .then( result => {
-            t.same(result.css, expectCSS);
-            t.same(result.warnings().length, 0);
+            t.deepEqual(result.css, expectCSS);
+            t.is(result.warnings().length, 0);
         });
 }
 
