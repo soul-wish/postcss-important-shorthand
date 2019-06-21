@@ -1,16 +1,14 @@
-var postcss = require('postcss');
+const postcss = require('postcss')
 
-module.exports = postcss.plugin('postcss-important-shorthand', function () {
-    var transformDecl = function (decl) {
-        if (decl.important || decl.value.indexOf('!') === -1) {
-            return;
-        }
+module.exports = postcss.plugin('postcss-important-shorthand', () => {
+  return css => {
+    css.walkDecls(decl => {
+      if (decl.important || decl.value.indexOf('!') === -1) {
+        return
+      }
 
-        decl.value = decl.value.replace('!', '').trim();
-        decl.important = true;
-    };
-
-    return function (css) {
-        css.walkDecls(transformDecl);
-    };
-});
+      decl.value = decl.value.replace('!', '').trim()
+      decl.important = true
+    })
+  }
+})

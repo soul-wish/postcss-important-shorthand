@@ -1,25 +1,26 @@
-import postcss from 'postcss';
-import test from 'ava';
-import fs from 'fs';
-import path from 'path';
-import plugin from './index';
+const postcss = require('postcss')
+const test = require('ava')
+const fs = require('fs')
+const path = require('path')
 
-function run(t, input, output, opts = { }) {
-    const testsDir = './fixtures/';
-    const inputName = input;
-    const expectName = output;
-    const inputPath  = path.resolve(testsDir + inputName);
-    const expectPath = path.resolve(testsDir + expectName);
-    const inputCSS = fs.readFileSync(inputPath, 'utf8');
-    const expectCSS = fs.readFileSync(expectPath, 'utf8');
+const plugin = require('./index')
 
-    return postcss([ plugin(opts) ]).process(inputCSS)
-        .then( result => {
-            t.deepEqual(result.css, expectCSS);
-            t.is(result.warnings().length, 0);
-        });
+function run (t, input, output, opts = { }) {
+  let testsDir = './fixtures/'
+  let inputName = input
+  let expectName = output
+  let inputPath = path.resolve(testsDir + inputName)
+  let expectPath = path.resolve(testsDir + expectName)
+  let inputCSS = fs.readFileSync(inputPath, 'utf8')
+  let expectCSS = fs.readFileSync(expectPath, 'utf8')
+
+  return postcss([plugin(opts)]).process(inputCSS)
+    .then(result => {
+      t.deepEqual(result.css, expectCSS)
+      t.is(result.warnings().length, 0)
+    })
 }
 
 test('plugin does the magic', t => {
-    return run(t, 'style.css', 'style-expected.css', { });
-});
+  return run(t, 'style.css', 'style-expected.css', { })
+})
