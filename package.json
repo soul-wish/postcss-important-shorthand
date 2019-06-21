@@ -1,6 +1,6 @@
 {
   "name": "postcss-important-shorthand",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "PostCSS plugin that allows you to use shorthand for your !important rules",
   "keywords": [
     "postcss",
@@ -46,11 +46,13 @@
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss",
-    "overrides": [{
-      "files": "test.js",
-      "rules": {
+    "overrides": [
+      {
+        "files": "test.js",
+        "rules": {
           "node/no-unpublished-require": 0
+        }
       }
-    }]
+    ]
   }
 }
